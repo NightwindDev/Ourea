@@ -5,6 +5,82 @@ body {
     -webkit-text-size-adjust: none;
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(230, 230, 230);
+    }
+
+    :root {
+        --primary-text: black;
+        --description-text: rgb(122, 122, 122);
+        --card-color: white;
+        --blur-color: rgba(216, 216, 216, 0.2);
+        --blur-intensity: 60px;
+        --what-is-it-image-src: url(/WhatIsItImageLight.png);
+        --screenshots-div-color: rgb(241, 241, 241);
+    }
+
+    .img-1 {
+        content: url(/carousel/1-light.PNG);
+    }
+
+    .img-2 {
+        content: url(/carousel/2-light.PNG);
+    }
+
+    .img-3 {
+        content: url(/carousel/3-light.PNG);
+    }
+
+    .img-4 {
+        content: url(/carousel/4-light.PNG);
+    }
+
+    .img-5 {
+        content: url(/carousel/5-light.PNG);
+    }
+
+    .img-6 {
+        content: url(/carousel/6-light.PNG);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-text: white;
+        --description-text: gray;
+        --card-color: rgb(17, 17, 17);
+        --blur-color: rgba(17, 17, 17, 0.5);
+        --blur-intensity: 50px;
+        --what-is-it-image-src: url(/WhatIsItImage.png);
+        --screenshots-div-color: rgb(35, 35, 35);
+    }
+
+    .img-1 {
+        content: url(/carousel/1.PNG);
+    }
+
+    .img-2 {
+        content: url(/carousel/2.PNG);
+    }
+
+    .img-3 {
+        content: url(/carousel/3.PNG);
+    }
+
+    .img-4 {
+        content: url(/carousel/4.PNG);
+    }
+
+    .img-5 {
+        content: url(/carousel/5.PNG);
+    }
+
+    .img-6 {
+        content: url(/carousel/6.PNG);
+    }
+}
+
 .desktop-blur {
     position:fixed;
     top: 0;
@@ -17,20 +93,20 @@ body {
     -webkit-backdrop-filter:blur(40px) brightness(110%);
     -moz-backdrop-filter:blur(40px) brightness(110%);
     -o-backdrop-filter:blur(40px) brightness(110%);
-    background: rgba(0, 0, 0, 0.2);
-    color:white;
+    background-color: var(--blur-color);
+    color:var(--primary-text);
     display: none;
 }
 
 .navbar {
     height: 4rem;
     width: 100%;
-    background-color: rgba(17, 17, 17, 0.5);
-    backdrop-filter: blur(50px) brightness(110%);
-    -webkit-backdrop-filter:blur(50px) brightness(110%);
-    -moz-backdrop-filter:blur(50px) brightness(110%);
-    -o-backdrop-filter:blur(50px) brightness(110%);
-    border-bottom: 0.1px solid rgba(85, 85, 85, 0.9);
+    background-color: var(--blur-color);
+    backdrop-filter: blur(var(--blur-intensity)) brightness(110%);
+    -webkit-backdrop-filter:blur(var(--blur-intensity)) brightness(120%);
+    -moz-backdrop-filter:blur(var(--blur-intensity)) brightness(110%);
+    -o-backdrop-filter:blur(var(--blur-intensity)) brightness(110%);
+    border-bottom: 0px solid rgba(85, 85, 85, 0.9);
     justify-content: center;
     display: flex;
     position: fixed;
@@ -52,11 +128,11 @@ body {
 }
 
 .body-card {
-    background-color: rgb(17, 17, 17);
+    background-color: var(--card-color);
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
-    background-image: url("/WhatIsItImage.png");
+    background-image: var(--what-is-it-image-src);
     height: 10rem;
     margin-bottom: 4rem;
     background-size: 105%;
@@ -76,20 +152,20 @@ body {
 
 .body-card-title {
     font-size: 2rem;
-    color:white;
+    color:var(--primary-text);
     margin-top:2rem;
     margin-bottom:0;
     padding-bottom: 0;
 }
 
 .what-is-it-text {
-    color: gray;
+    color: var(--description-text);
     font-size: 1rem;
     padding: 0px 2rem 0px 2rem;
 }
 
 .body-card-developers {
-    background-color: rgb(17, 17, 17);
+    background-color: var(--card-color);
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
@@ -100,7 +176,7 @@ body {
 }
 
 .body-card-downloads {
-    background-color: rgb(17, 17, 17);
+    background-color: var(--card-color);
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
@@ -142,7 +218,7 @@ body {
 }
 
 .body-card-contact {
-    background-color: rgb(17, 17, 17);
+    background-color: var(--card-color);
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
@@ -166,7 +242,7 @@ body {
 }
 
 .installation-text {
-    color: gray;
+    color: var(--description-text);
     font-size: 1rem;
     padding: 0px 2rem 0px 2rem;
 }
@@ -228,6 +304,7 @@ body {
 
     .navbar {
         height: 8rem;
+        border-bottom: 0.1px solid rgba(85, 85, 85, 0.9);
     }
 
     .ourea-navbar-links {
@@ -393,22 +470,22 @@ body {
 }
 
 .screenshots-div {
-    background-color: rgb(17, 17, 17);
+    background-color: var(--card-color);
     border-radius: 2rem;
-    width: calc(100% - 4rem);
+    width: 106rem;
     height: 50rem;
     margin: 2rem;
     float: right;
 }
 
 .screenshots-div-text {
-    color: gray;
+    color: var(--description-text);
     width: 22rem;
     margin-left: 2rem;
     margin-top: 1rem;
     height: 17.6rem;
     padding: 2rem;
-    background-color: rgb(35, 35, 35);
+    background-color: var(--screenshots-div-color);
     border-radius: 1rem;
     float:left;
 }
