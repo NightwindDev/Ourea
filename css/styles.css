@@ -1,0 +1,421 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+.desktop-blur {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index:2;
+    backdrop-filter: blur(40px) brightness(110%);
+    -webkit-backdrop-filter:blur(40px) brightness(110%);
+    -moz-backdrop-filter:blur(40px) brightness(110%);
+    -o-backdrop-filter:blur(40px) brightness(110%);
+    background: rgba(0, 0, 0, 0.2);
+    color:white;
+    display: none;
+}
+
+.navbar {
+    height: 4rem;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(50px) brightness(110%);
+    -webkit-backdrop-filter:blur(50px) brightness(110%);
+    -moz-backdrop-filter:blur(50px) brightness(110%);
+    -o-backdrop-filter:blur(50px) brightness(110%);
+    border-bottom: 0.1px solid rgba(85, 85, 85, 0.9);
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+}
+
+.ourea-navbar-icon {
+    height: 100%;
+}
+.ourea-navbar-links {
+    height: calc(100% - 10px);
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: gray;
+    margin: 5px -10px 5px 10px;
+    padding: 0 10px 0 10px;
+}
+
+.body-card {
+    background-color: rgb(17, 17, 17);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    background-image: url("/WhatIsItImage.png");
+    height: 10rem;
+    margin-bottom: 4rem;
+    background-size: 105%;
+    width: 25rem;
+    height: 22rem;
+    margin-right: 2rem;
+    background-repeat: no-repeat;
+}
+
+.body-contents {
+    width: calc(100% - 4rem);
+    height: 20rem;
+    margin: 6rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.body-card-title {
+    font-size: 2rem;
+    color:white;
+    margin-top:2rem;
+    margin-bottom:0;
+    padding-bottom: 0;
+}
+
+.what-is-it-text {
+    color: gray;
+    font-size: 1rem;
+    padding: 0px 2rem 0px 2rem;
+}
+
+.body-card-developers {
+    background-color: rgb(17, 17, 17);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    width: 25rem;
+    height: 22rem;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.body-card-downloads {
+    background-color: rgb(17, 17, 17);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    height: 22rem;
+    width: 25rem;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.download-button {
+    background-color: rgb(12, 95, 254);
+    width: calc(100% - 4rem);
+    font-size: 1rem;
+    margin: 0.5rem 2rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.download-button:hover {
+    background-color: rgb(68, 121, 226);
+}
+
+.learn-more-button-link {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.body-card-contact {
+    background-color: rgb(17, 17, 17);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    height: 22rem;
+    width: 25rem;
+    margin-bottom: 4rem;
+    position: relative;
+    margin-right: 2rem;
+}
+
+.contact-cell-link {
+    color:white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.installation-text {
+    color: gray;
+    font-size: 1rem;
+    padding: 0px 2rem 0px 2rem;
+}
+
+.altstore {
+    display: none;
+}
+
+.contact-cell {
+    background-color: rgb(35, 35, 35);
+    margin: 1rem 4rem;
+    position: relative;
+    width: calc(100% - 4rem);
+    margin: 0.5rem 2rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.learn-more-button {
+    background-color: rgb(12, 95, 254);
+    width: calc(100% - 4rem);
+    font-size: 1rem;
+    margin: 0.5rem 2rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.learn-more-button:hover {
+    background-color: rgb(68, 121, 226);
+}
+
+.screenshots-title {
+    font-size: 2rem;
+    color:white;
+    margin-top: 1rem;
+    margin-bottom:0;
+    padding-bottom: 0;
+    margin-left: 1.5rem;
+}
+
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media (pointer:none), (pointer:coarse) {
+
+    .navbar {
+        height: 8rem;
+    }
+
+    .ourea-navbar-links {
+        display: none;
+    }
+
+    .desktop-blur {
+        display: none;
+    }
+
+    .body-card {
+        height: 55rem;
+        background-repeat:repeat-x;
+        background-size: auto;
+    }
+
+    .body-contents {
+        display: inline;
+        margin: 10rem 2rem 2rem 2rem;
+    }
+
+    .body-card-title {
+        font-size: 5rem;
+    }
+
+    .what-is-it-text {
+        font-size: 2.5rem;
+    }
+
+    .body-card {
+        height: 55rem;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .body-card-developers {
+        height: 30rem;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .body-card-downloads {
+        height: 30rem;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .download-button {
+        width: calc(100% - 8rem);
+        position:relative;
+        border-radius: 20px;
+        margin: 1rem 2rem;
+        height: 8rem;
+        left: 0;
+        top: 0;
+    }
+
+    .learn-more-button-link {
+        font-size: 2.5rem;
+    }
+
+    .installation-text {
+        display: none;
+    }
+
+    .altstore {
+        background-color: rgb(47, 117, 121);
+        display: inline;
+    }
+
+    .body-card-contact {
+        height: 40rem;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .contact-cell {
+        background-color: rgb(35, 35, 35);
+        width: calc(100% - 8rem);
+        margin: 1rem 4rem;
+        height: 8rem;
+        border-radius: 20px;
+        border: none;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .contact-cell-link {
+        font-size: 2.5rem;
+    }
+
+    .learn-more-button {
+        background-color: rgb(12, 95, 254);
+        width: calc(100% - 8rem);
+        margin: 0 4rem;
+        height: 8rem;
+        border-radius: 20px;
+        border: none;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+}
+
+.ourea-navbar-links:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(35, 35, 35);
+}
+
+.desktop-blur-text {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.discord {
+    background-color: rgb(88, 101, 242);
+}
+
+.discord:hover {
+    background-color: rgb(118, 130, 255);
+}
+
+.twitter {
+    background-color: rgb(44, 130, 214);
+}
+
+.twitter:hover {
+    background-color: rgb(66, 147, 228);
+}
+
+.email {
+    background-color: rgb(219, 100, 89);
+}
+
+.email:hover {
+    background-color: rgb(248, 127, 116);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    align-items: center;
+    margin: 0;
+    height: 60rem;
+}
+
+.screenshots-div {
+    background-color: rgb(17, 17, 17);
+    border-radius: 2rem;
+    width: calc(100% - 4rem);
+    height: 50rem;
+    margin: 2rem;
+    float: right;
+}
+
+.screenshots-div-text {
+    color: gray;
+    width: 22rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    height: 17.6rem;
+    padding: 2rem;
+    background-color: rgb(35, 35, 35);
+    border-radius: 1rem;
+    float:left;
+}
+
+.screenshots-div img {
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 1rem 0rem 1.5rem 1.5rem;
+    float:left;
+}
