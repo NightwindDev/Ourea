@@ -286,7 +286,7 @@ body {
 
 .screenshots-title {
     font-size: 2rem;
-    color: white;
+    color: var(--primary-text);
     margin-top: 1rem;
     margin-bottom: 0;
     padding-bottom: 0;
