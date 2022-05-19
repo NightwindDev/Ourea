@@ -3,12 +3,12 @@
 <head>
     <title>Ourea</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="http://192.168.1.145:5500/OureaIcon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./OureaIcon.ico">
 
-    <link rel="shortcut icon" type="image/x-icon" href="http://192.168.1.145:5500/OureaIcon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./OureaIcon.ico">
 
-    <link rel="apple-touch-icon" href="/OureaIcon.ico">
+    <link rel="apple-touch-icon" href="./OureaIcon.ico">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ourea.ml/">
@@ -48,10 +48,10 @@
             <div class="body-card-contact">
                 <h2 class="body-card-title">Contact</h2>
                 <p class="installation-text">Contacting the developer is simple with these options.</p>
-                <button class="contact-cell discord" onClick="location.href='discord.gg/cjcNUbGEAX'">
+                <button class="contact-cell discord" onClick="location.href='?redirect=discord.gg/cjcNUbGEAX'">
                     <a class="contact-cell-link">Discord</a>
                 </button>
-                <button class="contact-cell twitter" onClick="location.href='https://twitter.com/oureaapp'">
+                <button class="contact-cell twitter" onClick="location.href='?redirect=twitter.com/oureaapp'">
                     <a class="contact-cell-link">Twitter</a>
                 </button>
                 <button class="contact-cell email" onClick="location.href='mailto:oureaapp@gmail.com'">
@@ -74,12 +74,12 @@
             <h2 class="screenshots-title">Screenshots</h2>
             <div class="screenshots-div-internal">
                 <div class="images-div">
-                    <img class="img-1" />
-                    <img class="img-2" />
-                    <img class="img-3" />
-                    <img class="img-4" />
-                    <img class="img-5" />
-                    <img class="img-6" />
+                    <img class="img img-1" />
+                    <img class="img img-2" />
+                    <img class="img img-3" />
+                    <img class="img img-4" />
+                    <img class="img img-5" />
+                    <img class="img img-6" />
                 </div>
                 <div class="screenshots-div-text">
                     <h2 class="body-card-title">UI</h2>
@@ -94,6 +94,14 @@
     <div class="desktop-blur">
         <p class="desktop-blur-text">Please open this page on mobile for the proper user experience.</p>
     </div>
+
+    <script>
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let redirect = urlParams.get('redirect');
+        if(redirect) window.location.replace('https://' + redirect);
+    </script>
+
 </body>
 
 </html>
