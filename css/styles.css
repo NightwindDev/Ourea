@@ -14,7 +14,7 @@ body {
          --card-color: white;
          --blur-color: rgba(216, 216, 216, 0.2);
          --blur-intensity: 60px;
-         --what-is-it-image-src: url(/WhatIsItImageLight.png);
+         --what-is-it-image-src: url("../WhatIsItImageLight.png");
          --screenshots-div-color: rgb(241, 241, 241);
     }
      .img-1 {
@@ -43,7 +43,7 @@ body {
          --card-color: rgb(17, 17, 17);
          --blur-color: rgba(17, 17, 17, 0.5);
          --blur-intensity: 50px;
-         --what-is-it-image-src: url(/WhatIsItImage.png);
+         --what-is-it-image-src: url("../WhatIsItImage.png");
          --screenshots-div-color: rgb(35, 35, 35);
     }
      .img-1 {
